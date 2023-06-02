@@ -1,0 +1,9 @@
+.title, .container-list {
+    display: flex;
+    justify-content: center;
+}
+
+.centered-list {
+    list-style-type: none;
+    text-align: left;
+}

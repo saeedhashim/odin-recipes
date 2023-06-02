@@ -1,13 +1,82 @@
-.title, .desc,
-.desc-content, .ingredients, .ingredients-container,
-.steps, .steps-container {
-    display: flex;
-    justify-content: center;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: verdana, "lucida console", arial;
+    font-size: 16px;
 }
 
-.img {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+header {
     text-align: center;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+}
+
+.title {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.section-title {
+    margin: 20px 0;
+}
+
+.img-container {
+    text-align: center;
+}
+
+.img-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-source {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.desc-content {
+    text-align: justify;
+}
+
+.ingredients-list,
+.steps-list {
+    text-align: left;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ingredients-list li,
+.steps-list li {
+    margin-bottom: 10px;
+}
+
+.ingredients-list li:before {
+    content: "•";
+    margin-right: 5px;
+}
+
+ol {
+    counter-reset: step-counter;
+}
+
+.steps-list li:before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+@media (min-width: 768px) {
+
+    .desc-content,
+    .ingredients-container,
+    .steps-container {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: justify;
+    }
 }

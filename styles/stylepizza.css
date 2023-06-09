@@ -3,12 +3,13 @@ body {
     padding: 0;
     font-family: verdana, "lucida console", arial;
     font-size: 16px;
+    background-color: bisque;
 }
 
 header {
     text-align: center;
     padding: 20px 0;
-    background-color: #f9f9f9;
+    background-color: rgb(247, 102, 102);
 }
 
 .title {
@@ -18,10 +19,6 @@ header {
 main {
     padding: 20px;
     text-align: center;
-}
-
-.section-title {
-    margin: 20px 0;
 }
 
 .img-container {
@@ -42,6 +39,26 @@ main {
     text-align: justify;
 }
 
+.section-title {
+    margin: 0;
+}
+
+#description {
+    background-color: aquamarine;
+}
+
+#ingredients {
+    background-color: greenyellow;
+}
+
+#steps {
+    background-color: gold;
+}
+
+.description, .ingredients, .steps {
+    border: 2px solid black;
+}
+
 .ingredients-list,
 .steps-list {
     text-align: left;
@@ -54,7 +71,7 @@ main {
     margin-bottom: 10px;
 }
 
-.ingredients-list li:before {
+.ingredients-list li::before {
     content: "•";
     margin-right: 5px;
 }
@@ -63,7 +80,7 @@ ol {
     counter-reset: step-counter;
 }
 
-.steps-list li:before {
+.steps-list li::before {
     counter-increment: step-counter;
     content: counter(step-counter);
     font-weight: bold;

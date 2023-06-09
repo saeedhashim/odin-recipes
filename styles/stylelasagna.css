@@ -21,10 +21,6 @@ main {
     text-align: center;
 }
 
-.img-container {
-    text-align: center;
-}
-
 .img-container img {
     max-width: 100%;
     height: auto;
@@ -35,10 +31,20 @@ main {
     margin: 10px 0;
 }
 
-.desc-content {
+.img-container, .desc-container,
+.ingredients-container, .steps-container {
     text-align: justify;
+    margin: 0 auto;
 }
 
+.img-container p, .desc-container em {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
 .section-title {
     margin: 0;
 }
@@ -88,12 +94,10 @@ ol {
 }
 
 @media (min-width: 768px) {
-
-    .desc-content,
+    .img-container,
+    .desc-container,
     .ingredients-container,
     .steps-container {
         max-width: 600px;
-        margin: 0 auto;
-        text-align: justify;
     }
 }
